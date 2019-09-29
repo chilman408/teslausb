@@ -276,8 +276,8 @@ function archive_teslacam_clips () {
 
     fix_errors_in_cam_file
   
-    DIR_COUNT=$(cd "$CAM_MOUNT"/TeslaCam && find . -maxdepth 2 -path './SavedClips/*' -o -path './SentryClips/*' -type d | wc -l)
-    FILE_COUNT=$(cd "$CAM_MOUNT"/TeslaCam && find . -maxdepth 3 -path './SavedClips/*' -o -path './SentryClips/*' -type f | wc -l)
+    DIR_COUNT=$(cd "$CAM_MOUNT"/TeslaCam && find . -maxdepth 2 -path './SavedClips/*' -o -path './SentryClips/*' -o -path './RecentClips/*' -type d | wc -l)
+    FILE_COUNT=$(cd "$CAM_MOUNT"/TeslaCam && find . -maxdepth 3 -path './SavedClips/*' -o -path './SentryClips/*' -o -path './RecentClips/*' -type f | wc -l)
   
     log "There are $DIR_COUNT event folder(s) with $FILE_COUNT file(s) to move."
   
