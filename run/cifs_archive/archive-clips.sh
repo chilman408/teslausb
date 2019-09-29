@@ -80,6 +80,9 @@ moveclips "$CAM_MOUNT/TeslaCam/SavedClips" '*'
 # v10 firmware adds a SentryClips folder
 moveclips "$CAM_MOUNT/TeslaCam/SentryClips" '*'
 
+# Archive RecentClips
+moveclips "$CAM_MOUNT/TeslaCam/RecentClips" '*'
+
 kill %1
 
 # delete empty directories under SavedClips and SentryClips
